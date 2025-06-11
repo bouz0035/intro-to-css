@@ -1,120 +1,68 @@
-/* Selectors */
+/* File: css/style.css */
 
-/* Element selector
-- Select all the tags of the same type */
-body { 
-    background-color: rgb(231, 205, 214);
+/* 1. Select body */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  background-color: #7251B5;
 }
 
-
-
-/* Targeting multiple elements
-- If you’d like to style more than one element the same way you can use a comma to separate the tag names. */
-h1, h2, h3{
-    font-family:Arial, Helvetica, sans-serif
+/* 2. Select h1, h2 and h3 */
+h1, h2, h3 {
+  margin-bottom: 0;
 }
 
-
-
-/* Some elements have default styling applied in the browser that you have to consider. The p element has margin top and bottom. */
-p{
-    margin: .5em 0;
+/* 3. Select the id company-name */
+#company-name {
+  font-size: 1.5rem;
 }
 
-
-
-/* . Class selector
-- Select an element that has a class */
-.profile-pic{
-    width: 150px;
-    border-radius: 50%;
+/* 4. Select header and footer */
+header, footer {
+  background-color: #000;
+  color: #DEC9E9;
 }
 
-
-
-/* # ID selector
-- Select an element that has has the ID - remember you can only have one unique ID per page */
-#header-text{
-    margin: 2em o;
+/* 5. Select the class wrapper */
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 2em;
 }
 
-
-
-/* + Adjacent sibling
-- Select an element immediately beside another element */
-h1 + p,
-h3 + p{
-    color: rgb(114, 46, 177);
+/* 6. Select both list types */
+ul, ol {
+  padding: 0;
+  list-style: none;
 }
 
-
-
-/* Element selector
-- Affecting multiple h2 on the page */
-h2{
-    text-transform:uppercase ;
-    border-bottom: 2px solid #000;
+/* 7. Use descendant selector to select the links within the navigation */
+nav a {
+  color: #DEC9E9;
+  text-decoration: none;
 }
 
-
-/* > Child selector 
-- Select an element directly inside another element */
-header > p{
-    font-size: 3rem;
+/* 8. Use an adjacent selector to target the section immediately beside the section with id #intro */
+#intro + section {
+  background-color: #000;
+  color: #DEC9E9;
 }
 
-main>section{
-    margin-bottom: 4rem;
+/* 9. Use a child selector to target the img tag directly within the article tags */
+article > img {
+  width: 150px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  margin-top: 1em;
 }
 
-
-
-/* [] Attribute
-- Select an element by it’s attribute. */
-a[rel="external"] {
-    color: rgb(0, 0, 0);
+/* 10. Select every even numbered li within the ordered list */
+ol li:nth-child(even) {
+  color: #dc33dc;
 }
 
-
-
-
-/* Pseudo classes */
-
-/* :nth-child()
-- Select an element by it’s number OR odd/even. */
-li:nth-child(3){
-color: rgb(54, 7, 37);
-}
-
-li:nth-child(odd){
-    background-color: rgb(221, 150, 174);
-}
-
-/* :last-child
-- Select the element when it’s the last inside its parent. */
-
-dl div:last-child{
-    background-color: rgb(221, 150, 174);
-}
-
-
-/* :first-of-type
-- Select an element that’s the first of its kind within its parent. */
-#experience section:first-of-type {
-    border-bottom: 2px dashed #ccc;
-}
-
-
-
-
-/* Removing bullets and changing bullet type */
-.skills {
-    list-style: none;
-}
-
-
-
-/* Change link styling */
-header a {
-    color: rgb(156, 67, 95);
+/* 11. Use a child selector to target the img tag directly within the main element */
+main > img {
+  width: 100%;
 }
